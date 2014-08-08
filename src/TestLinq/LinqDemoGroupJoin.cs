@@ -138,6 +138,7 @@ namespace LinqDemo
                     //Children = classes,
                 });
 
+            Assert.IsTrue(result.Any(i => i.Author == "unknown"));
             Assert.AreEqual(result.Count(i => i.Author == ".NET" && i.BaseClass == "Exception"), 1);
             Assert.AreEqual(result.Count(i => i.Author == ".NET" && i.BaseClass == "EventArgs"), 1);
             Assert.AreEqual(result.Count(i => i.Author == "OpenTween" && i.BaseClass == "OTBaseForm"), 1);
