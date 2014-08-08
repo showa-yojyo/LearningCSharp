@@ -9,12 +9,15 @@ namespace LinqDemo
     public class LinqDemoAsEnumerable
     {
         /// <summary>
-        /// 
+        /// AsEnumerable ‚Í‚±‚¤‚¢‚¤g‚í‚ê•û‚Í‘z’è‚µ‚Ä‚¢‚È‚¢‚Í‚¸B
         /// </summary>
         [TestMethod]
         public void TestAsEnumerable()
         {
-            Assert.Fail();
+            int[] source = { 0, 1, 2, 3, 4, 5 };
+            var result = source.AsEnumerable();
+
+            Assert.IsTrue(source.SequenceEqual(result));
         }
     }
 }
