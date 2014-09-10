@@ -23,5 +23,14 @@ namespace LinqDemo
         {
             Assert.IsFalse("".Any(c => c == ' ' || c == 'Å@'));
         }
+
+        [TestMethod]
+        public void TestAnyEnumerable()
+        {
+            var iter = Enumerable.Range(0, 10);
+            Assert.IsTrue(iter.Any());
+
+            Assert.AreEqual(iter.ElementAt(0), 0);
+        }
     }
 }
